@@ -1,0 +1,13 @@
+- var basename = htmlWebpackPlugin.options.basename
+- var entryPath = htmlWebpackPlugin.files.chunks[basename].entry
+doctype html
+html(lang="en")
+  head
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    meta(name="robots" content="noindex, nofollow")
+    title
+    include ./head.html
+  body
+    include ./body.html
+    //- pre #{JSON.stringify(htmlWebpackPlugin,null,4)}
+    script(src="."+entryPath)
